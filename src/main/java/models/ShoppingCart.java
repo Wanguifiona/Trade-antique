@@ -3,16 +3,18 @@ package models;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class Product {
-
+public class ShoppingCart {
     private String productName;
     private String descriptionURL;
+    private int productCost;
+    private int quantity;
     private int id;
-    private static ArrayList<Product> instances = new ArrayList<>();
+    private static ArrayList<ShoppingCart> instances = new ArrayList<>();
 
-
-    public Product(String productName, String descriptionURL) {
+    public ShoppingCart(String productName, int productCost, int quantity, String descriptionURL) {
         this.productName = productName;
+        this.productCost = productCost;
+        this.quantity = quantity;
         this.descriptionURL = descriptionURL;
         instances.add(this);
         this.id = instances.size();
@@ -24,18 +26,28 @@ public class Product {
     public String getDescriptionURL(){
         return descriptionURL;
     }
+    public int getProductCost() {
+        return productCost;
+    }
+    public int getQuantity() {
+        return quantity;
+    }
 
-    public static ArrayList<Product> getAll(){
+    public static ArrayList<ShoppingCart> getAll(){
         return instances;
     }
 
-    public static void clearAllProduct(){
+    public static void clearAllPrice(){
         instances.clear();
     }
     public int getId() {
         return id;
     }
-    public static Product findById(int id){
+    public static ShoppingCart findById(int id){
         return instances.get(id-1);
     }
+
 }
+
+
+

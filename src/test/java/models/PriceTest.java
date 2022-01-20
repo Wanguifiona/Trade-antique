@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class ProductTest {
+public class PriceTest {
     @Test
     public void NewPostObjectGetsCorrectlyCreated_true() throws Exception {
         Product product = new Product("Table", "https://tradeantiquewebdesign.com");
