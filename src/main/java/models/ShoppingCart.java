@@ -37,7 +37,7 @@ public class ShoppingCart {
         return instances;
     }
 
-    public static void clearAllPrice(){
+    public static void clearAllShopping(){
         instances.clear();
     }
     public int getId() {

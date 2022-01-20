@@ -32,14 +32,14 @@ public class ProductTest {
     }
 
     @Test
-    public void AllHerosAreCorrectlyReturned_true() {
+    public void AllProductsAreCorrectlyReturned_true() {
         Product product = new Product("Table", "https://tradeantiquewebdesign.com");
         Product product1 = new Product("Table", "https://tradeantiquewebdesign.com");
         assertEquals(2, Product.getAll().size());
     }
 
     @Test
-    public void AllHerosContainsAllHeros_true() {
+    public void AllProductContainsAllHeros_true() {
         Product product = new Product("Table", "https://tradeantiquewebdesign.com");
         Product product2 = new Product("Table", "https://tradeantiquewebdesign.com");
         assertTrue(Product.getAll().contains(product));
@@ -47,14 +47,14 @@ public class ProductTest {
     }
 
     @Test
-    public void getId_heroInstantiateWithAnID_1() throws Exception {
+    public void getId_productsInstantiateWithAnID_1() throws Exception {
         Product.clearAllProduct();  // Remember, the test will fail without this line! We need to empty leftover Posts from previous tests!
         Product myProduct = new Product("Table", "https://tradeantiquewebdesign.com");
         assertEquals(1, myProduct.getId());
 
     }
     @Test
-    public void findReturnsCorrectHeroWhenMoreThanOneHeroExists() throws Exception {
+    public void findReturnsCorrectproductWhenMoreThanOneHeroExists() throws Exception {
         Product product = new Product("Table", "https://tradeantiquewebdesign.com");
         Product otherProduct = new Product("Table", "https://tradeantiquewebdesign.com");
         assertEquals(2, Product.findById(otherProduct.getId()).getId());

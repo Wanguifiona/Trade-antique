@@ -13,12 +13,15 @@ public class Price {
 
 
     public Price(String productName, int productCost, int quantity, String descriptionURL) {
-        this.product = productCost;
+        this.productName = productName;
         this.productCost = productCost;
         this.quantity = quantity;
         this.descriptionURL = descriptionURL;
         instances.add(this);
         this.id = instances.size();
+    }
+    public String getProductName() {
+        return productName;
     }
     public int getProductCost() {
         return productCost;
